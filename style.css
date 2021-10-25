@@ -1,0 +1,209 @@
+/*
+Theme Name: cursetheme
+Theme URI: https://salwamanosur.com/themes/cursethemepage/
+Author: Salwa Manosur
+Author URI: https://salwamansour.com/
+Description:this is my 2nd wordpress theme 
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cursetheme
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: calc(.8rem + .5vw);
+    line-height:1.5;
+    /* outline: 1px solid red; */
+    font-family: 'lato',sans-serif;
+}
+/* stikey part */
+.stiky-part{
+    position: fixed;
+    height: calc(3.125rem + .8vw);
+    background-color: rgba(248, 242, 247);
+    width: 100%;
+    box-shadow: .5px .5px 20px rgba(177, 136, 136, 0.301);
+    z-index: 10;
+    /* overflow-x: hidden; */
+}
+/* side nav part */
+#side-nav{
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    background-color: #f67c92;
+    z-index:20;
+    right: -250px;
+}
+#side-nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+#side-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#nav-check:checked ~ #side-nav{
+    right: 0;
+}
+/* hamburger btn and logo stylinga */
+#menu-btn{
+    z-index: 30;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: calc(3.125rem + .8vw);
+}
+.logo{
+    position: relative;
+    top: -15px;
+    width: calc(6rem + .5rem);
+    left: calc(1.2rem + .5vw);
+}
+/* the main part stylings */
+.m-container{
+    position: relative;
+    top:calc(3.125rem + .8vw) ;
+    padding: 1.2rem 1.2rem 5rem 2.5rem;
+   max-width: 900px;
+   margin: auto;
+   /* background-color: rgba(128, 128, 128, 0.562); */
+}
+/* /////////// */
+.common-elemnt img{
+    width: 100%;
+}
+.common-border,
+form input{
+    background: transparent;
+    border: 2px solid #f67c92;
+    /* font-weight: bold; */
+    cursor: pointer;
+    padding: 15px 18px;
+    margin: .5rem;
+}
+button[class="common-border"]{
+    margin: 1rem;
+}
+.common-elemnt .elemnt-txt,
+.header p{
+   
+    max-width:25rem;
+}
+h1{
+    max-width: 80%;
+    font-size: calc(1.2rem + .5vw);
+   margin-bottom: 1.3rem;
+   margin-top: .8rem;
+}
+p{
+    text-indent: 1rem;
+}
+section{
+    padding-bottom: 2rem;
+}
+#featurs{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
+   text-align: center;
+   
+}
+#featurs img{
+    width: 100px;
+}
+#featurs h4{
+    margin-bottom: .5rem;
+}
+#featurs div{
+    margin-bottom: 2rem;
+    max-width: 200px;
+    text-align: center;
+}
+
+.social-icons{
+    margin-bottom: .5rem;
+    position: fixed;
+    top: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2.2rem;
+    transform: translateX(-120%);
+ background-color: #f67c92ab ;
+}
+.social-icons img{
+    padding: .5rem 0;
+    cursor: pointer;
+    width: 80%;
+}
+@media only screen and (min-width:800px){
+    .header{
+        background-image: url(../images/background.png);
+        background-size: cover;
+     
+    }
+    .common-elemnt {
+        display: flex;
+       justify-content: space-between;
+    }
+    .common-elemnt:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .common-elemnt .elemnt-txt ,
+    .common-elemnt img {
+        flex-basis: 50%;
+    }
+    #featurs{
+        /* display: flex; */
+       flex-direction: row;
+    }
+}
+.ft-legal{
+    /* background:#333 ; */
+    padding: 0.9375rem 1.875rem;
+}
+.ft-legal-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ft-legal-list li{
+    margin:  0.125rem 0.625rem;
+    white-space: nowrap;
+}
+.ft-legal-list li:nth-last-child(2){
+    flex: 1;
+}
+footer{
+
+    background:#f67c92ab ;
+  line-height: 1.5;
+    /* color: #bbb; */
+
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+
+}
+ul a {
+    text-decoration: none;
+    color: #eee;
+}
